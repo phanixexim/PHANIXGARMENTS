@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Phanix Garments – Premium Women's Wear & Kids Wear Manufacturer, Wholesaler & Exporter based in Surat, Gujarat, India. Trusted by boutiques, retailers, and international buyers.">
+<meta name="keywords" content="women wear manufacturer, kids wear manufacturer, garment exporter, wholesale garments, surat garments, ladies suits, kurtis, co-ord sets, ethnic wear">
+<meta name="author" content="Phanix Garments">
+<meta property="og:title" content="Phanix Garments | Premium Women's & Kids Wear Manufacturer">
+<meta property="og:description" content="Trusted manufacturer, wholesaler & exporter of premium women's wear and kids wear. Surat, Gujarat, India.">
+<meta property="og:type" content="website">
+<meta name="robots" content="index, follow">
+<title>Phanix Garments | Women's Wear & Kids Wear Manufacturer, Wholesaler & Exporter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #d4af37;
+    --gold-light: #e8c84a;
+    --gold-dim: rgba(212,175,55,0.15);
+    --gold-border: rgba(212,175,55,0.35);
+    --bg: #0f0f0f;
+    --bg-2: #161616;
+    --bg-3: #1c1c1c;
+    --glass: rgba(255,255,255,0.04);
+    --glass-border: rgba(255,255,255,0.08);
+    --text: #f0ece4;
+    --text-muted: #8a8278;
+    --text-dim: #5c5650;
+    --white: #ffffff;
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-elegant: 'Cormorant Garamond', Georgia, serif;
+    --radius: 2px;
+    --radius-lg: 6px;
+    --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── LOADER ── */
+  #loader {
+    position: fixed; inset: 0; background: var(--bg); z-index: 9999;
+    display: flex; align-items: center; justify-content: center; flex-direction: column;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+  }
+  #loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+  .loader-logo {
+    font-family: var(--font-display);
+    font-size: 2.4rem; font-weight: 700; color: var(--gold);
+    letter-spacing: 0.12em; margin-bottom: 2rem;
+  }
+  .loader-bar {
+    width: 180px; height: 1px; background: var(--bg-3); position: relative; overflow: hidden;
+  }
+  .loader-bar::after {
+    content: ''; position: absolute; left: -100%; top: 0;
+    width: 100%; height: 100%; background: var(--gold);
+    animation: loaderFill 1.6s ease forwards;
+  }
+  @keyframes loaderFill { to { left: 100%; } }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 72px;
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+  }
+  nav.scrolled {
+    background: rgba(15,15,15,0.95);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 1px 0 var(--gold-border);
+  }
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 1.4rem; font-weight: 700; color: var(--gold);
+    letter-spacing: 0.08em; text-decoration: none;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .nav-logo span { font-weight: 300; color: var(--text-muted); font-size: 0.7rem; letter-spacing: 0.2em; display: block; text-transform: uppercase; }
+  .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+  .nav-links a {
+    color: var(--text-muted); text-decoration: none; font-size: 0.8rem;
+    letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px;
+    background: var(--gold); transition: width 0.3s ease;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-cta {
+    padding: 8px 20px; border: 1px solid var(--gold); color: var(--gold) !important;
+    border-radius: var(--radius); font-size: 0.75rem !important;
+    transition: background 0.3s ease, color 0.3s ease !important;
+  }
+  .nav-cta:hover { background: var(--gold) !important; color: #000 !important; }
+  .nav-cta::after { display: none !important; }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+  .hamburger span { display: block; width: 24px; height: 1.5px; background: var(--gold); transition: var(--transition); }
+  .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 4.5px); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4.5px); }
+  .mobile-menu {
+    display: none; position: fixed; inset: 72px 0 0 0; background: rgba(15,15,15,0.97);
+    backdrop-filter: blur(20px); z-index: 800; flex-direction: column;
+    align-items: center; justify-content: center; gap: 2rem;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    color: var(--text-muted); text-decoration: none; font-size: 1.2rem;
+    letter-spacing: 0.15em; text-transform: uppercase; font-family: var(--font-display);
+    font-weight: 400; transition: color 0.3s;
+  }
+  .mobile-menu a:hover { color: var(--gold); }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    background:
+      linear-gradient(160deg, rgba(15,15,15,0.75) 0%, rgba(15,15,15,0.5) 40%, rgba(15,15,15,0.85) 100%),
+      url('image/hero-banner.jpg') center/cover no-repeat;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center; padding: 140px 5% 80px; position: relative; overflow: hidden;
+  }
+  #hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 120%, rgba(212,175,55,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-eyebrow {
+    font-family: var(--font-body); font-size: 0.7rem; letter-spacing: 0.35em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem;
+    opacity: 0; animation: fadeUp 0.8s 0.4s ease forwards;
+  }
+  .hero-title {
+    font-family: var(--font-display); font-size: clamp(2.4rem, 6vw, 5rem);
+    font-weight: 700; line-height: 1.12; color: var(--white);
+    margin-bottom: 1.5rem; max-width: 900px;
+    opacity: 0; animation: fadeUp 0.8s 0.6s ease forwards;
+  }
+  .hero-title em { font-style: italic; color: var(--gold); }
+  .hero-sub {
+    font-family: var(--font-elegant); font-size: clamp(1rem, 2vw, 1.3rem);
+    font-weight: 300; color: var(--text-muted); max-width: 600px;
+    margin: 0 auto 3rem; letter-spacing: 0.02em;
+    opacity: 0; animation: fadeUp 0.8s 0.8s ease forwards;
+  }
+  .hero-btns {
+    display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+    opacity: 0; animation: fadeUp 0.8s 1s ease forwards;
+  }
+  .btn-primary {
+    padding: 14px 36px; background: var(--gold); color: #000;
+    font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase;
+    font-weight: 600; border: none; cursor: pointer; text-decoration: none;
+    border-radius: var(--radius); transition: background 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-outline {
+    padding: 14px 36px; background: transparent; color: var(--text);
+    font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase;
+    font-weight: 500; border: 1px solid var(--glass-border); cursor: pointer;
+    text-decoration: none; border-radius: var(--radius);
+    transition: border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+  .hero-scroll {
+    position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    opacity: 0; animation: fadeUp 0.8s 1.4s ease forwards;
+  }
+  .hero-scroll span { font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-dim); }
+  .scroll-line { width: 1px; height: 50px; background: linear-gradient(to bottom, var(--gold), transparent); animation: scrollPulse 2s ease infinite; }
+  @keyframes scrollPulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+
+  /* ── SECTIONS ── */
+  section { padding: 100px 5%; }
+  .section-label {
+    font-size: 0.65rem; letter-spacing: 0.4em; text-transform: uppercase;
+    color: var(--gold); font-weight: 500; margin-bottom: 0.75rem;
+  }
+  .section-title {
+    font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 700; line-height: 1.2; color: var(--white); margin-bottom: 1rem;
+  }
+  .section-sub {
+    font-family: var(--font-elegant); font-size: 1.1rem; color: var(--text-muted);
+    max-width: 560px; line-height: 1.8;
+  }
+  .section-header { margin-bottom: 4rem; }
+  .section-header.center { text-align: center; }
+  .section-header.center .section-sub { margin: 0 auto; }
+  .gold-rule { width: 48px; height: 1px; background: var(--gold); margin: 1.2rem 0; }
+  .gold-rule.center { margin: 1.2rem auto; }
+
+  /* ── ABOUT ── */
+  #about { background: var(--bg-2); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+  .about-image {
+    position: relative; border-radius: var(--radius-lg); overflow: hidden;
+    aspect-ratio: 4/5;
+  }
+  .about-image img { width: 100%; height: 100%; object-fit: cover; }
+  .about-image::after {
+    content: ''; position: absolute; inset: 0;
+    border: 1px solid var(--gold-border); border-radius: var(--radius-lg);
+    pointer-events: none;
+  }
+  .about-frame {
+    position: absolute; bottom: -12px; right: -12px;
+    width: calc(100% - 24px); height: calc(100% - 24px);
+    border: 1px solid var(--gold-dim); border-radius: var(--radius-lg);
+    pointer-events: none; z-index: 0;
+  }
+  .about-text p { color: var(--text-muted); margin-bottom: 1.2rem; line-height: 1.8; }
+  .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2.5rem; }
+  .stat-card {
+    background: var(--glass); border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg); padding: 1.4rem 1.2rem;
+    backdrop-filter: blur(10px); transition: border-color 0.3s, background 0.3s;
+  }
+  .stat-card:hover { border-color: var(--gold-border); background: var(--gold-dim); }
+  .stat-icon { font-size: 1.4rem; margin-bottom: 0.5rem; }
+  .stat-title { font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; color: var(--white); margin-bottom: 0.25rem; }
+  .stat-desc { font-size: 0.78rem; color: var(--text-muted); }
+
+  /* ── COLLECTIONS ── */
+  #womens { background: var(--bg); }
+  #kids { background: var(--bg-2); }
+  .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+  .product-card {
+    background: var(--bg-3); border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg); overflow: hidden;
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+  }
+  .product-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--gold-border);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px var(--gold-dim);
+  }
+  .product-image {
+    height: 240px; overflow: hidden; position: relative;
+    background: linear-gradient(135deg, #1a1a1a, #252525);
+  }.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.6s ease;
+}
+  .product-card:hover .product-image img { transform: scale(1.08); }
+  .product-badge {
+    position: absolute; top: 1rem; left: 1rem;
+    background: var(--gold); color: #000; font-size: 0.6rem;
+    letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700;
+    padding: 4px 10px; border-radius: var(--radius);
+  }
+  .product-body { padding: 1.4rem; }
+  .product-body h3 { font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; color: var(--white); margin-bottom: 0.4rem; }
+  .product-body p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
+  .product-arrow {
+    display: flex; align-items: center; gap: 8px; margin-top: 1rem;
+    font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--gold); font-weight: 500; transition: gap 0.3s;
+  }
+  .product-card:hover .product-arrow { gap: 12px; }
+
+  /* ── PROCESS ── */
+  #process { background: var(--bg); }
+  .process-timeline { position: relative; max-width: 800px; margin: 0 auto; }
+  .process-line {
+    position: absolute; left: 28px; top: 0; bottom: 0; width: 1px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+  }
+  .process-item {
+    display: flex; gap: 2rem; padding: 0 0 3rem 0; position: relative;
+    opacity: 0; transform: translateX(-20px); transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .process-item.visible { opacity: 1; transform: translateX(0); }
+  .process-dot {
+    width: 56px; height: 56px; border-radius: 50%; background: var(--bg-3);
+    border: 1px solid var(--gold-border); display: flex; align-items: center;
+    justify-content: center; font-size: 1.3rem; flex-shrink: 0;
+    transition: background 0.3s, box-shadow 0.3s;
+  }
+  .process-item:hover .process-dot { background: var(--gold-dim); box-shadow: 0 0 20px rgba(212,175,55,0.2); }
+  .process-content { padding-top: 12px; }
+  .process-num { font-size: 0.65rem; letter-spacing: 0.3em; color: var(--gold); text-transform: uppercase; margin-bottom: 0.4rem; }
+  .process-content h3 { font-family: var(--font-display); font-size: 1.1rem; color: var(--white); margin-bottom: 0.4rem; }
+  .process-content p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
+
+  /* ── PROJECTS ── */
+  #projects { background: var(--bg-2); }
+  .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+  .project-card {
+    background: var(--glass); border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg); overflow: hidden;
+    transition: transform 0.4s ease, border-color 0.4s ease;
+  }
+  .project-card:hover { transform: translateY(-6px); border-color: var(--gold-border); }
+  .project-img {
+    height: 200px; overflow: hidden;
+    background: linear-gradient(135deg, #1a1510, #201c14);
+    position: relative;
+  }
+  .project-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+  .project-card:hover .project-img img { transform: scale(1.05); }
+  .project-body { padding: 1.6rem; }
+  .project-tag { font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 0.6rem; }
+  .project-body h3 { font-family: var(--font-display); font-size: 1.1rem; color: var(--white); margin-bottom: 0.5rem; }
+  .project-body p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.7; }
+
+  /* ── GALLERY ── */
+  #gallery { background: var(--bg); }
+  .gallery-masonry {
+    columns: 3; column-gap: 1rem;
+  }
+  .gallery-item {
+    break-inside: avoid; margin-bottom: 1rem; position: relative;
+    border-radius: var(--radius-lg); overflow: hidden; cursor: pointer;
+  }
+  .gallery-item img { width: 100%; display: block; transition: transform 0.5s ease; }
+  .gallery-item:hover img { transform: scale(1.05); }
+  .gallery-overlay {
+    position: absolute; inset: 0; background: rgba(0,0,0,0.5);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; transition: opacity 0.3s ease;
+  }
+  .gallery-item:hover .gallery-overlay { opacity: 1; }
+  .gallery-zoom { font-size: 1.5rem; color: var(--gold); }
+
+  /* LIGHTBOX */
+  #lightbox {
+    display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.95);
+    z-index: 9000; align-items: center; justify-content: center;
+  }
+  #lightbox.open { display: flex; }
+  #lightbox img { max-width: 90vw; max-height: 90vh; border-radius: var(--radius-lg); }
+  #lightbox-close {
+    position: absolute; top: 2rem; right: 2rem; font-size: 2rem;
+    color: var(--gold); cursor: pointer; line-height: 1;
+  }
+
+  /* ── WHY CHOOSE US ── */
+  #why { background: var(--bg-2); }
+  .why-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; }
+  .why-card {
+    background: var(--glass); border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg); padding: 1.8rem 1.4rem;
+    transition: border-color 0.3s, background 0.3s, transform 0.3s;
+  }
+  .why-card:hover { border-color: var(--gold-border); background: var(--gold-dim); transform: translateY(-4px); }
+  .why-icon { font-size: 1.8rem; margin-bottom: 1rem; }
+  .why-card h3 { font-family: var(--font-display); font-size: 0.95rem; color: var(--white); margin-bottom: 0.5rem; }
+  .why-card p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.7; }
+
+  /* ── SERVICES ── */
+  #services { background: var(--bg); }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+  .service-card {
+    position: relative; background: var(--bg-3); border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg); padding: 2rem 1.8rem; overflow: hidden;
+    transition: border-color 0.4s, transform 0.4s;
+  }
+  .service-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0; transition: opacity 0.4s;
+  }
+  .service-card:hover { border-color: var(--gold-border); transform: translateY(-6px); }
+  .service-card:hover::before { opacity: 1; }
+  .service-num { font-family: var(--font-display); font-size: 3rem; font-weight: 700; color: var(--gold-dim); line-height: 1; margin-bottom: 1rem; }
+  .service-card h3 { font-family: var(--font-display); font-size: 1.1rem; color: var(--white); margin-bottom: 0.6rem; }
+  .service-card p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.7; }
+
+  /* ── COUNTERS ── */
+  #counters { background: var(--gold); padding: 60px 5%; }
+  .counters-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center; }
+  .counter-item { color: #000; }
+  .counter-num { font-family: var(--font-display); font-size: 2.8rem; font-weight: 700; line-height: 1; }
+  .counter-label { font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; opacity: 0.7; margin-top: 0.4rem; }
+
+  /* ── CONTACT ── */
+  #contact { background: var(--bg-2); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+  .contact-info h3 { font-family: var(--font-display); font-size: 1.4rem; color: var(--white); margin-bottom: 1.5rem; }
+  .contact-item { display: flex; gap: 1rem; margin-bottom: 1.4rem; align-items: flex-start; }
+  .contact-icon { width: 40px; height: 40px; border: 1px solid var(--gold-border); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+  .contact-detail { font-size: 0.8rem; color: var(--text-muted); }
+  .contact-detail strong { display: block; color: var(--white); margin-bottom: 2px; font-size: 0.85rem; }
+  .contact-detail a { color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
+  .contact-detail a:hover { color: var(--gold); }
+  .social-links { display: flex; gap: 0.75rem; margin-top: 2rem; }
+  .social-link {
+    width: 40px; height: 40px; border: 1px solid var(--glass-border);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    color: var(--text-muted); text-decoration: none; font-size: 0.9rem;
+    transition: border-color 0.3s, color 0.3s, background 0.3s;
+  }
+  .social-link:hover { border-color: var(--gold); color: var(--gold); background: var(--gold-dim); }
+  .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+  .form-group label { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); }
+  .form-group input, .form-group textarea, .form-group select {
+    background: var(--bg-3); border: 1px solid var(--glass-border);
+    color: var(--text); padding: 12px 14px; border-radius: var(--radius);
+    font-family: var(--font-body); font-size: 0.88rem; outline: none;
+    transition: border-color 0.3s;
+  }
+  .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--gold); }
+  .form-group textarea { resize: vertical; min-height: 120px; }
+  .form-group select option { background: var(--bg-3); }
+  .map-placeholder {
+    margin-top: 1.5rem; height: 200px; background: var(--bg-3);
+    border: 1px solid var(--glass-border); border-radius: var(--radius-lg);
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column; gap: 0.5rem; color: var(--text-muted);
+    font-size: 0.85rem;
+  }
+  .map-placeholder span { font-size: 2rem; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #080808; border-top: 1px solid var(--glass-border);
+    padding: 60px 5% 30px;
+  }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 3rem; margin-bottom: 3rem; }
+  .footer-brand .footer-logo { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--gold); letter-spacing: 0.08em; margin-bottom: 1rem; }
+  .footer-brand p { font-size: 0.82rem; color: var(--text-dim); line-height: 1.7; max-width: 280px; }
+  .footer-col h4 { font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 1.2rem; }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 0.6rem; }
+  .footer-col ul li a { font-size: 0.82rem; color: var(--text-dim); text-decoration: none; transition: color 0.3s; }
+  .footer-col ul li a:hover { color: var(--text); }
+  .footer-contact-item { display: flex; gap: 0.7rem; align-items: flex-start; margin-bottom: 0.8rem; font-size: 0.82rem; color: var(--text-dim); }
+  .footer-contact-item a { color: var(--text-dim); text-decoration: none; transition: color 0.3s; }
+  .footer-contact-item a:hover { color: var(--gold); }
+  .footer-bottom {
+    padding-top: 2rem; border-top: 1px solid var(--glass-border);
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-bottom p { font-size: 0.78rem; color: var(--text-dim); }
+  .footer-bottom .footer-social { display: flex; gap: 0.5rem; }
+  .footer-bottom .footer-social a { color: var(--text-dim); text-decoration: none; font-size: 0.85rem; transition: color 0.3s; }
+  .footer-bottom .footer-social a:hover { color: var(--gold); }
+
+  /* ── FLOATERS ── */
+  #wa-btn {
+    position: fixed; bottom: 2rem; right: 2rem; z-index: 800;
+    width: 56px; height: 56px; background: #25d366; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none; box-shadow: 0 4px 20px rgba(37,211,102,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.6rem;
+  }
+  #wa-btn:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.45); }
+  #back-top {
+    position: fixed; bottom: 2rem; left: 2rem; z-index: 800;
+    width: 44px; height: 44px; background: var(--bg-3);
+    border: 1px solid var(--gold-border); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; color: var(--gold); font-size: 1rem;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  #back-top.visible { opacity: 1; pointer-events: all; }
+  #back-top:hover { transform: translateY(-3px); }
+
+  /* ── REVEAL ── */
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) {
+    .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .about-image { aspect-ratio: 16/9; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .counters-grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery-masonry { columns: 2; }
+  }
+  @media (max-width: 768px) {
+    nav { padding: 0 4%; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    section { padding: 70px 4%; }
+    #hero { padding: 120px 4% 80px; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .counters-grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery-masonry { columns: 2; }
+    .products-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 480px) {
+    .products-grid, .why-grid, .services-grid, .projects-grid { grid-template-columns: 1fr; }
+    .gallery-masonry { columns: 1; }
+    .counters-grid { grid-template-columns: 1fr 1fr; }
+    .hero-btns { flex-direction: column; align-items: center; }
+    .process-line { left: 22px; }
+    .process-dot { width: 44px; height: 44px; font-size: 1rem; }
+  }
+
+  /* ── GOLD GRADIENT TEXT ── */
+  .gold-text { background: linear-gradient(135deg, #d4af37, #f0d060, #d4af37); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+  /* ── GLASS CARD ── */
+  .glass-card {
+    background: var(--glass); border: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px); border-radius: var(--radius-lg);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+
+  /* Form submit feedback */
+  .form-success {
+    background: rgba(212,175,55,0.1); border: 1px solid var(--gold-border);
+    border-radius: var(--radius-lg); padding: 1rem 1.4rem;
+    font-size: 0.85rem; color: var(--gold); display: none; margin-top: 0.5rem;
+  }
+</style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-logo">PHANIX</div>
+  <div class="loader-bar"></div>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">
+    PHANIX <div><span>Garments</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#womens">Women's Wear</a></li>
+    <li><a href="#kids">Kids Wear</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMobile()">About</a>
+  <a href="#womens" onclick="closeMobile()">Women's Wear</a>
+  <a href="#kids" onclick="closeMobile()">Kids Wear</a>
+  <a href="#process" onclick="closeMobile()">Process</a>
+  <a href="#gallery" onclick="closeMobile()">Gallery</a>
+  <a href="#services" onclick="closeMobile()">Services</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div>
+    <p class="hero-eyebrow">Surat, Gujarat, India · Est. Manufacturing Excellence</p>
+    <h1 class="hero-title">Premium <em>Women's Wear</em> & Kids Wear Manufacturer</h1>
+    <p class="hero-sub">Trusted Manufacturing, Wholesale Supply &amp; Export Solutions for Boutiques, Retailers &amp; International Buyers</p>
+    <div class="hero-btns">
+      <a href="#womens" class="btn-primary">View Collection</a>
+      <a href="#contact" class="btn-outline">Contact Us</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+   <div class="about-image">
+    <img src="image/about.jpg" alt="Phanix Garments">
+    <div class="about-frame"></div>
+</div>
+    <div class="about-text">
+      <div class="reveal">
+        <p class="section-label">Our Story</p>
+        <h2 class="section-title">Crafting Quality,<br>Delivering <span class="gold-text">Confidence</span></h2>
+        <div class="gold-rule"></div>
+        <p class="section-sub">Phanix Garments is a trusted manufacturer and supplier of premium women's wear and kids wear.</p>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <p style="color:var(--text-muted);margin-top:1.2rem;line-height:1.8;">We specialize in creating trendy, comfortable, and high-quality garments for wholesalers, retailers, boutiques, and international buyers. With a focus on quality craftsmanship, competitive pricing, and timely delivery, we help our customers grow their fashion business with confidence.</p>
+        <p style="color:var(--text-muted);margin-top:0.8rem;line-height:1.8;">Our state-of-the-art manufacturing facility in Surat — India's textile capital — ensures every piece meets the highest standards before it reaches your customer.</p>
+      </div>
+      <div class="stats-grid reveal reveal-delay-2">
+        <div class="stat-card">
+          <div class="stat-icon">✦</div>
+          <div class="stat-title">Premium Quality</div>
+          <div class="stat-desc">Stringent quality checks at every production stage</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🏭</div>
+          <div class="stat-title">Wholesale Supply</div>
+          <div class="stat-desc">Bulk orders handled with precision and speed</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🌍</div>
+          <div class="stat-title">Export Services</div>
+          <div class="stat-desc">Reliable international shipping &amp; documentation</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">📦</div>
+          <div class="stat-title">Bulk Orders</div>
+          <div class="stat-desc">Scalable production for any order volume</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COUNTERS -->
+<div id="counters">
+  <div class="counters-grid">
+    <div class="counter-item">
+      <div class="counter-num" data-target="500">0</div>
+      <div class="counter-label">+ Designs Annually</div>
+    </div>
+    <div class="counter-item">
+      <div class="counter-num" data-target="50">0</div>
+      <div class="counter-label">+ Wholesale Clients</div>
+    </div>
+    <div class="counter-item">
+      <div class="counter-num" data-target="15">0</div>
+      <div class="counter-label">+ Countries Exported</div>
+    </div>
+    <div class="counter-item">
+      <div class="counter-num" data-target="100">0</div>
+      <div class="counter-label">% Quality Guaranteed</div>
+    </div>
+  </div>
+</div>
+
+<!-- WOMEN'S WEAR -->
+<section id="womens">
+  <div class="section-header reveal">
+    <p class="section-label">Collection</p>
+    <h2 class="section-title">Women's Wear</h2>
+    <div class="gold-rule"></div>
+    <p class="section-sub">
+      Elegant, contemporary, and export-ready women's garments crafted for the modern buyer.
+    </p>
+  </div>
+
+  <div class="products-grid">
+
+    <!-- Row 1 -->
+    <div class="product-card reveal reveal-delay-1">
+      <div class="product-image">
+        <img src="image/womens1.jpg" alt="Designer Kurtis" loading="lazy">
+        <div class="product-badge">Bestseller</div>
+      </div>
+      <div class="product-body">
+        <h3>Designer Kurtis</h3>
+        <p>Printed, embroidered & plain kurtis in cotton, rayon, and georgette fabrics available in bulk.</p>
+        <div class="product-arrow">Enquire Now <span>→</span></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal reveal-delay-2">
+      <div class="product-image">
+        <img src="image/womens2.jpg" alt="Co-Ord Sets" loading="lazy">
+        <div class="product-badge">Trending</div>
+      </div>
+      <div class="product-body">
+        <h3>Co-Ord Sets</h3>
+        <p>Matching two-piece and three-piece sets in contemporary prints and solid colors.</p>
+        <div class="product-arrow">Enquire Now <span>→</span></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal reveal-delay-3">
+      <div class="product-image">
+        <img src="image/womens3.jpg" alt="Ladies Suits" loading="lazy">
+      </div>
+      <div class="product-body">
+        <h3>Ladies Suits</h3>
+        <p>Salwar suits, palazzo sets & dupatta collections for retail and export markets.</p>
+        <div class="product-arrow">Enquire Now <span>→</span></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal reveal-delay-1">
+      <div class="product-image">
+        <img src="image/womens4.jpg" alt="Ethnic Wear" loading="lazy">
+        <div class="product-badge">Export Ready</div>
+      </div>
+      <div class="product-body">
+        <h3>Ethnic Wear</h3>
+        <p>Traditional and fusion ethnic wear blending heritage craft with modern silhouettes.</p>
+        <div class="product-arrow">Enquire Now <span>→</span></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal reveal-delay-2">
+      <div class="product-image">
+        <img src="image/womens5.jpg" alt="Casual Wear" loading="lazy">
+      </div>
+      <div class="product-body">
+        <h3>Casual Wear</h3>
+        <p>Everyday comfortable separates and coordinates designed for global lifestyle markets.</p>
+        <div class="product-arrow">Enquire Now <span>→</span></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal reveal-delay-3">
+      <div class="product-image">
+        <img src="image/womens6.jpg" alt="Boutique Collections" loading="lazy">
+        <div class="product-badge">Premium</div>
+      </div>
+      <div class="product-body">
+        <h3>Boutique Collections</h3>
+        <p>Exclusive limited-run designs crafted for boutique retailers who demand distinction.</p>
+        <div class="product-arrow">Enquire Now <span>→</span></div>
+      </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="product-card reveal reveal-delay-1">
+      <div class="product-image">
+        <img src="image/womens7.jpg" alt="Premium Kurtis" loading="lazy">
+        <div class="product-badge">New Arrival</div>
+      </div>
+      <div class="product-body">
+        <h3>Premium Kurtis</h3>
+        <p>Elegant designer kurtis crafted with premium fabrics and modern styling.</p>
+        <div class="product-arrow">Enquire Now <span>→</span></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal reveal-delay-2">
+      <div class="product-image">
+        <img src="image/womens8.jpg" alt="Designer Suits" loading="lazy">
+        <div class="product-badge">Trending</div>
+      </div>
+      <div class="product-body">
+        <h3>Designer Suits</h3>
+        <p>Stylish suit sets suitable for boutiques, wholesalers, and exporters.</p>
+        <div class="product-arrow">Enquire Now <span>→</span></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal reveal-delay-3">
+      <div class="product-image">
+        <img src="image/womens9.jpg" alt="Party Wear" loading="lazy">
+      </div>
+      <div class="product-body">
+        <h3>Party Wear</h3>
+        <p>Exclusive party wear collection with premium finishing and detailing.</p>
+        <div class="product-arrow">Enquire Now <span>→</span></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal reveal-delay-1">
+      <div class="product-image">
+        <img src="image/womens10.jpg" alt="Cotton Collection" loading="lazy">
+        <div class="product-badge">Premium</div>
+      </div>
+      <div class="product-body">
+        <h3>Cotton Collection</h3>
+        <p>Comfortable cotton wear designed for everyday elegance and style.</p>
+        <div class="product-arrow">Enquire Now <span>→</span></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal reveal-delay-2">
+      <div class="product-image">
+        <img src="image/womens11.jpg" alt="Printed Kurtis" loading="lazy">
+      </div>
+      <div class="product-body">
+        <h3>Printed Kurtis</h3>
+        <p>Fashionable printed kurtis featuring vibrant colors and unique designs.</p>
+        <div class="product-arrow">Enquire Now <span>→</span></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal reveal-delay-3">
+      <div class="product-image">
+        <img src="image/womens12.jpg" alt="Boutique Collection" loading="lazy">
+        <div class="product-badge">Export Ready</div>
+      </div>
+      <div class="product-body">
+        <h3>Boutique Collection</h3>
+        <p>Premium boutique wear specially designed for modern fashion retailers.</p>
+        <div class="product-arrow">Enquire Now <span>→</span></div>
+      </div>
+    </div>
+<div class="product-card reveal reveal-delay-1">
+  <div class="product-image">
+    <img src="image/womens13.jpg" alt="Premium Ethnic Wear" loading="lazy">
+    <div class="product-badge">New</div>
+  </div>
+  <div class="product-body">
+    <h3>Premium Ethnic Wear</h3>
+    <p>Elegant ethnic styles crafted with premium fabrics and modern designs.</p>
+    <div class="product-arrow">Enquire Now <span>→</span></div>
+  </div>
+</div>
+
+<div class="product-card reveal reveal-delay-2">
+  <div class="product-image">
+    <img src="image/womens14.jpg" alt="Designer Collection" loading="lazy">
+    <div class="product-badge">Trending</div>
+  </div>
+  <div class="product-body">
+    <h3>Designer Collection</h3>
+    <p>Fashion-forward garments designed for boutiques and wholesale buyers.</p>
+    <div class="product-arrow">Enquire Now <span>→</span></div>
+  </div>
+</div>
+
+<div class="product-card reveal reveal-delay-3">
+  <div class="product-image">
+    <img src="image/womens15.jpg" alt="Exclusive Collection" loading="lazy">
+    <div class="product-badge">Premium</div>
+  </div>
+  <div class="product-body">
+    <h3>Exclusive Collection</h3>
+    <p>Exclusive premium collection featuring unique prints and luxury styling.</p>
+    <div class="product-arrow">Enquire Now <span>→</span></div>
+  </div>
+</div>
+  </div>
+</section>
+
+<!-- KIDS WEAR -->
+<section id="kids">
+  <div class="section-header reveal">
+    <p class="section-label">Collection</p>
+    <h2 class="section-title">Kids Wear</h2>
+    <div class="gold-rule"></div>
+    <p class="section-sub">Trendy, comfortable, and safe kids wear — crafted with premium fabrics for active young lives.</p>
+  </div>
+  <div class="products-grid">
+    <div class="product-card reveal reveal-delay-1">
+      <div class="product-image">
+       <img src="image/kids1.jpg" alt="Girls Dresses" loading="lazy">
+        <div class="product-badge">New Arrival</div>
+      </div>
+      <div class="product-body">
+        <h3>Girls Dresses</h3>
+        <p>Floral, printed, and solid dresses in breathable fabrics for ages 2–14 years.</p>
+        <div class="product-arrow">Enquire Now <span>→</span></div>
+      </div>
+    </div>
+    <div class="product-card reveal reveal-delay-2">
+      <div class="product-image">
+      <img src="image/kids2.jpg" alt="Kids Co-Ord Sets" loading="lazy">
+        <div class="product-badge">Trending</div>
+      </div>
+      <div class="product-body">
+        <h3>Kids Co-Ord Sets</h3>
+        <p>Matching top and bottom sets — vibrant patterns loved by kids and parents alike.</p>
+        <div class="product-arrow">Enquire Now <span>→</span></div>
+      </div>
+    </div>
+    <div class="product-card reveal reveal-delay-3">
+      <div class="product-image">
+      <img src="image/kids3.jpg" alt="Casual Wear" loading="lazy">
+      </div>
+      <div class="product-body">
+        <h3>Casual Wear</h3>
+        <p>Comfortable everyday clothing — soft cottons, stretch fits, and easy wash fabrics.</p>
+        <div class="product-arrow">Enquire Now <span>→</span></div>
+      </div>
+    </div>
+    <div class="product-card reveal reveal-delay-1">
+      <div class="product-image">
+       <img src="image/kids4.jpg" alt="Party Wear" loading="lazy">
+        <div class="product-badge">Festive</div>
+      </div>
+      <div class="product-body">
+        <h3>Party Wear</h3>
+        <p>Elegant occasion wear with embellishments and fine detailing for special events.</p>
+        <div class="product-arrow">Enquire Now <span>→</span></div>
+      </div>
+    </div>
+    <div class="product-card reveal reveal-delay-2">
+      <div class="product-image">
+      <img src="image/kids5.jpg" alt="Printed Sets" loading="lazy">
+      </div>
+      <div class="product-body">
+        <h3>Printed Sets</h3>
+        <p>Fun, colourful all-over prints on high-quality knit and woven fabrics.</p>
+        <div class="product-arrow">Enquire Now <span>→</span></div>
+      </div>
+    </div>
+    <div class="product-card reveal reveal-delay-3">
+      <div class="product-image">
+       <img src="image/kids6.jpg" alt="Trendy Fashion Wear" loading="lazy">
+        <div class="product-badge">Export Ready</div>
+      </div>
+      <div class="product-body">
+        <h3>Trendy Fashion Wear</h3>
+        <p>Season-forward styles inspired by global kidswear trends — export-ready collections.</p>
+        <div class="product-arrow">Enquire Now <span>→</span></div>
+      </div>
+    </div><div class="product-card reveal reveal-delay-1">
+  <div class="product-image">
+    <img src="image/kids7.jpg" alt="Baby Girl Dresses" loading="lazy">
+    <div class="product-badge">Popular</div>
+  </div>
+  <div class="product-body">
+    <h3>Baby Girl Dresses</h3>
+    <p>Soft and stylish dresses designed for comfort, playtime, and special occasions.</p>
+    <div class="product-arrow">Enquire Now <span>→</span></div>
+  </div>
+</div>
+
+<div class="product-card reveal reveal-delay-2">
+  <div class="product-image">
+    <img src="image/kids8.jpg" alt="Cotton Frocks" loading="lazy">
+    <div class="product-badge">Premium</div>
+  </div>
+  <div class="product-body">
+    <h3>Cotton Frocks</h3>
+    <p>Premium cotton frocks featuring trendy prints and breathable fabrics.</p>
+    <div class="product-arrow">Enquire Now <span>→</span></div>
+  </div>
+</div>
+
+<div class="product-card reveal reveal-delay-3">
+  <div class="product-image">
+    <img src="image/kids9.jpg" alt="Ethnic Kids Wear" loading="lazy">
+    <div class="product-badge">Festive</div>
+  </div>
+  <div class="product-body">
+    <h3>Ethnic Kids Wear</h3>
+    <p>Traditional ethnic styles for festivals, weddings, and family celebrations.</p>
+    <div class="product-arrow">Enquire Now <span>→</span></div>
+  </div>
+</div>
+
+<div class="product-card reveal reveal-delay-1">
+  <div class="product-image">
+    <img src="image/kids10.jpg" alt="Girls Co-Ord Sets" loading="lazy">
+  </div>
+  <div class="product-body">
+    <h3>Girls Co-Ord Sets</h3>
+    <p>Modern matching sets with trendy prints and comfortable fits.</p>
+    <div class="product-arrow">Enquire Now <span>→</span></div>
+  </div>
+</div>
+
+<div class="product-card reveal reveal-delay-2">
+  <div class="product-image">
+    <img src="image/kids11.jpg" alt="Party Collection" loading="lazy">
+    <div class="product-badge">New</div>
+  </div>
+  <div class="product-body">
+    <h3>Party Collection</h3>
+    <p>Stylish party outfits designed to make every occasion special.</p>
+    <div class="product-arrow">Enquire Now <span>→</span></div>
+  </div>
+</div>
+
+<div class="product-card reveal reveal-delay-3">
+  <div class="product-image">
+    <img src="image/kids12.jpg" alt="Premium Kids Wear" loading="lazy">
+    <div class="product-badge">Export Ready</div>
+  </div>
+  <div class="product-body">
+    <h3>Premium Kids Wear</h3>
+    <p>High-quality export-grade kids wear crafted with premium fabrics and finishes.</p>
+    <div class="product-arrow">Enquire Now <span>→</span></div>
+  </div>
+</div>
+  </div>
+</section>
+
+<!-- MANUFACTURING PROCESS -->
+<section id="process">
+  <div class="section-header reveal">
+    <p class="section-label">How We Work</p>
+    <h2 class="section-title">Manufacturing Process</h2>
+    <div class="gold-rule"></div>
+    <p class="section-sub">From concept to delivery — a disciplined process that guarantees quality at scale.</p>
+  </div>
+  <div class="process-timeline">
+    <div class="process-line"></div>
+    <div class="process-item">
+      <div class="process-dot">✏️</div>
+      <div class="process-content">
+        <div class="process-num">Step 01</div>
+        <h3>Design Development</h3>
+        <p>Our design team develops seasonal collections based on market trends, buyer briefs, and custom OEM requirements. CAD patterns and sample prototypes are prepared before production begins.</p>
+      </div>
+    </div>
+    <div class="process-item">
+      <div class="process-dot">🧵</div>
+      <div class="process-content">
+        <div class="process-num">Step 02</div>
+        <h3>Fabric Sourcing</h3>
+        <p>We source premium fabrics from certified suppliers in Surat's textile market — cottons, rayons, georgettes, and blended fabrics tested for quality, colorfastness, and shrinkage.</p>
+      </div>
+    </div>
+    <div class="process-item">
+      <div class="process-dot">✂️</div>
+      <div class="process-content">
+        <div class="process-num">Step 03</div>
+        <h3>Cutting &amp; Stitching</h3>
+        <p>Precision cutting with computerised lay plans minimises wastage. Our skilled tailors and stitching units ensure consistent sizing and seam quality across every batch.</p>
+      </div>
+    </div>
+    <div class="process-item">
+      <div class="process-dot">🔍</div>
+      <div class="process-content">
+        <div class="process-num">Step 04</div>
+        <h3>Quality Inspection</h3>
+        <p>Every garment passes through a multi-point quality check — stitch count, measurement accuracy, colour matching, and finishing standards — before moving to packaging.</p>
+      </div>
+    </div>
+    <div class="process-item">
+      <div class="process-dot">📦</div>
+      <div class="process-content">
+        <div class="process-num">Step 05</div>
+        <h3>Packaging</h3>
+        <p>Professional packaging with custom labels, hangtags, and poly-bags tailored to buyer specifications. Export cartons are packed and marked per international shipping norms.</p>
+      </div>
+    </div>
+    <div class="process-item" style="padding-bottom:0">
+      <div class="process-dot">🌍</div>
+      <div class="process-content">
+        <div class="process-num">Step 06</div>
+        <h3>Delivery &amp; Export</h3>
+        <p>On-time dispatch via road, air, and sea freight with complete documentation — Invoice, Packing List, COO, and GST/export formalities handled in-house.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-header center reveal">
+    <p class="section-label">Portfolio</p>
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="gold-rule center"></div>
+    <p class="section-sub">A selection of our manufacturing programs serving domestic and international markets.</p>
+  </div>
+  <div class="projects-grid">
+    <div class="project-card reveal reveal-delay-1">
+      <div class="project-img">
+        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&q=80" alt="Women's Fashion Collection" loading="lazy">
+      </div>
+      <div class="project-body">
+        <div class="project-tag">Women's Wear · Wholesale</div>
+        <h3>Women's Fashion Collection</h3>
+        <p>A premium collection of ladies suits, kurtis, co-ord sets, and ethnic wear designed for wholesalers and retailers across India and international markets.</p>
+      </div>
+    </div>
+    <div class="project-card reveal reveal-delay-2">
+      <div class="project-img">
+        <img src="https://images.unsplash.com/photo-1504439904031-93ded9f93e4e?w=600&q=80" alt="Kids Wear Collection" loading="lazy">
+      </div>
+      <div class="project-body">
+        <div class="project-tag">Kids Wear · OEM</div>
+        <h3>Kids Wear Collection</h3>
+        <p>Trendy and comfortable kids wear collection featuring modern styles and premium fabrics — supplied to boutiques, retailers, and online resellers.</p>
+      </div>
+    </div>
+    <div class="project-card reveal reveal-delay-3">
+      <div class="project-img">
+        <img src="https://images.unsplash.com/photo-1559526324-593bc073d938?w=600&q=80" alt="International Export Program" loading="lazy">
+      </div>
+      <div class="project-body">
+        <div class="project-tag">Export · International</div>
+        <h3>International Export Program</h3>
+        <p>Supplying quality garments to buyers across multiple countries with reliable production timelines, documentation support, and consistent shipping processes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="section-header center reveal">
+    <p class="section-label">Gallery</p>
+    <h2 class="section-title">Product Gallery</h2>
+    <div class="gold-rule center"></div>
+    <p class="section-sub">A glimpse into our collections and manufacturing quality.</p>
+  </div>
+
+  <div class="gallery-masonry" id="galleryGrid">
+
+    <div class="gallery-item">
+      <img src="image/gallery1.jpg" alt="Fashion Gallery 1" loading="lazy">
+      <div class="gallery-overlay"><span class="gallery-zoom">⊕</span></div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="image/gallery2.jpg" alt="Fashion Gallery 2" loading="lazy">
+      <div class="gallery-overlay"><span class="gallery-zoom">⊕</span></div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="image/gallery3.jpg" alt="Fashion Gallery 3" loading="lazy">
+      <div class="gallery-overlay"><span class="gallery-zoom">⊕</span></div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="image/gallery4.jpg" alt="Fashion Gallery 4" loading="lazy">
+      <div class="gallery-overlay"><span class="gallery-zoom">⊕</span></div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="image/gallery5.jpg" alt="Fashion Gallery 5" loading="lazy">
+      <div class="gallery-overlay"><span class="gallery-zoom">⊕</span></div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="image/gallery6.jpg" alt="Fashion Gallery 6" loading="lazy">
+      <div class="gallery-overlay"><span class="gallery-zoom">⊕</span></div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="image/gallery7.jpg" alt="Fashion Gallery 7" loading="lazy">
+      <div class="gallery-overlay"><span class="gallery-zoom">⊕</span></div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="image/gallery8.jpg" alt="Fashion Gallery 8" loading="lazy">
+      <div class="gallery-overlay"><span class="gallery-zoom">⊕</span></div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="image/gallery9.jpg" alt="Kids Gallery 9" loading="lazy">
+      <div class="gallery-overlay"><span class="gallery-zoom">⊕</span></div>
+    </div>
+
+  </div>
+</section>
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <span id="lightbox-close" onclick="closeLightbox()">✕</span>
+  <img id="lightbox-img" src="" alt="Gallery Preview">
+</div>
+
+<!-- WHY CHOOSE US -->
+<section id="why">
+  <div class="section-header center reveal">
+    <p class="section-label">Our Advantage</p>
+    <h2 class="section-title">Why Choose Phanix</h2>
+    <div class="gold-rule center"></div>
+    <p class="section-sub">Eight reasons why boutiques, wholesalers, and international buyers trust us.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card reveal reveal-delay-1">
+      <div class="why-icon">✦</div>
+      <h3>Premium Quality Manufacturing</h3>
+      <p>Multi-stage quality control ensures every garment meets stringent finish and fit standards.</p>
+    </div>
+    <div class="why-card reveal reveal-delay-2">
+      <div class="why-icon">💰</div>
+      <h3>Competitive Wholesale Pricing</h3>
+      <p>Factory-direct prices that give your business strong margins without compromising quality.</p>
+    </div>
+    <div class="why-card reveal reveal-delay-3">
+      <div class="why-icon">⏱</div>
+      <h3>Timely Delivery</h3>
+      <p>Committed production timelines with real-time order tracking and proactive updates.</p>
+    </div>
+    <div class="why-card reveal reveal-delay-1">
+      <div class="why-icon">📦</div>
+      <h3>Bulk Order Management</h3>
+      <p>Scalable production capacity for small boutique runs to large wholesale and export orders.</p>
+    </div>
+    <div class="why-card reveal reveal-delay-2">
+      <div class="why-icon">🌍</div>
+      <h3>Export Expertise</h3>
+      <p>Complete export documentation, freight coordination, and customs compliance in-house.</p>
+    </div>
+    <div class="why-card reveal reveal-delay-3">
+      <div class="why-icon">🎨</div>
+      <h3>Custom Design Development</h3>
+      <p>OEM and private label services — bring your designs or co-develop new collections with us.</p>
+    </div>
+    <div class="why-card reveal reveal-delay-1">
+      <div class="why-icon">🤝</div>
+      <h3>Reliable Buyer Support</h3>
+      <p>Dedicated account management from enquiry through sampling to final delivery and beyond.</p>
+    </div>
+    <div class="why-card reveal reveal-delay-2">
+      <div class="why-icon">🔍</div>
+      <h3>Quality Control Standards</h3>
+      <p>ISO-aligned inspection processes with AQL sampling and pre-shipment inspections.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-header reveal">
+    <p class="section-label">What We Offer</p>
+    <h2 class="section-title">Export &amp; Wholesale<br>Services</h2>
+    <div class="gold-rule"></div>
+    <p class="section-sub">Comprehensive garment supply solutions tailored to your business model.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal reveal-delay-1">
+      <div class="service-num">01</div>
+      <h3>International Export</h3>
+      <p>End-to-end export services including production, quality inspection, documentation, and freight — to buyers across Asia, Middle East, Europe, and beyond.</p>
+    </div>
+    <div class="service-card reveal reveal-delay-2">
+      <div class="service-num">02</div>
+      <h3>Wholesale Distribution</h3>
+      <p>Bulk supply to distributors and wholesalers across India. Flexible MOQs, consistent sizing, and reliable reorder cycles.</p>
+    </div>
+    <div class="service-card reveal reveal-delay-3">
+      <div class="service-num">03</div>
+      <h3>Boutique Supply</h3>
+      <p>Exclusive designs in limited quantities for boutiques who want differentiated inventory their customers won't find elsewhere.</p>
+    </div>
+    <div class="service-card reveal reveal-delay-1">
+      <div class="service-num">04</div>
+      <h3>Retail Supply</h3>
+      <p>Ready-to-retail garments with proper labelling, hangtags, and packaging — direct from our factory to your store shelves.</p>
+    </div>
+    <div class="service-card reveal reveal-delay-2">
+      <div class="service-num">05</div>
+      <h3>OEM Manufacturing</h3>
+      <p>We manufacture to your exact specifications — your patterns, your fabrics, your labels. Full confidentiality guaranteed.</p>
+    </div>
+    <div class="service-card reveal reveal-delay-3">
+      <div class="service-num">06</div>
+      <h3>Private Label Services</h3>
+      <p>Launch your own fashion brand with our private label program. We handle design, production, and packaging under your brand identity.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-header reveal">
+    <p class="section-label">Get In Touch</p>
+    <h2 class="section-title">Let's Build Something<br><span class="gold-text">Together</span></h2>
+    <div class="gold-rule"></div>
+    <p class="section-sub">Ready to source premium garments? Send us an enquiry and we'll get back within 24 hours.</p>
+  </div>
+  <div class="contact-grid">
+    <div>
+      <div class="contact-item reveal">
+        <div class="contact-icon">📞</div>
+        <div class="contact-detail">
+          <strong>Phone &amp; WhatsApp</strong>
+          <a href="tel:+919427202639">+91 9427202639</a>
+        </div>
+      </div>
+      <div class="contact-item reveal">
+        <div class="contact-icon">✉️</div>
+        <div class="contact-detail">
+          <strong>Email</strong>
+          <a href="mailto:phanixgarmets@gmail.com">phanixgarmets@gmail.com</a><br>
+          <a href="mailto:phanixexim@gmail.com">phanixexim@gmail.com</a>
+        </div>
+      </div>
+      <div class="contact-item reveal">
+        <div class="contact-icon">📍</div>
+        <div class="contact-detail">
+          <strong>Location</strong>
+         Shop No.124, 1st Floor,Blue Trio Shoping center,Opp-Green City Appartment,Near-Gauravpath Roav,Adajan, Surat, India, 395009 — Textile Capital of India
+        </div>
+      </div>
+      <div class="contact-item reveal">
+        <div class="contact-icon">🌐</div>
+        <div class="contact-detail">
+          <strong>Website</strong>
+          Coming Soon
+        </div>
+      </div>
+      <div class="social-links reveal">
+        <a href="https://www.linkedin.com/in/phanix-exim-0748b6401/" target="_blank" rel="noopener" class="social-link" title="LinkedIn">in</a>
+        <a href="https://www.instagram.com/phanix_exim/" target="_blank" rel="noopener" class="social-link" title="Instagram">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61589236751005" target="_blank" rel="noopener" class="social-link" title="Facebook">f</a>
+        <a href="https://wa.me/919427202639" target="_blank" rel="noopener" class="social-link" title="WhatsApp">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+      <div class="map-placeholder reveal">
+        <span>📍</span>
+        <strong style="color:var(--text);">Surat, Gujarat, India</strong>
+        <small>Textile Capital of India</small>
+      </div>
+    </div>
+    <div class="reveal">
+      <form class="contact-form" onsubmit="submitForm(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Full Name" required>
+          </div>
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input type="text" id="company" placeholder="Business Name">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="you@company.com" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone / WhatsApp</label>
+            <input type="tel" id="phone" placeholder="+91 00000 00000">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="interest">I'm Interested In</label>
+          <select id="interest">
+            <option value="">Select a category</option>
+            <option>Women's Wear — Wholesale</option>
+            <option>Kids Wear — Wholesale</option>
+            <option>Export / International Buying</option>
+            <option>Boutique Supply</option>
+            <option>OEM / Private Label</option>
+            <option>General Enquiry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" placeholder="Tell us about your requirements, estimated quantity, and destination market…"></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%;font-family:var(--font-body);">Send Enquiry</button>
+        <div class="form-success" id="formSuccess">✓ Thank you! We'll get back to you within 24 hours.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">PHANIX GARMENTS</div>
+      <p>Trusted manufacturer and supplier of premium women's wear and kids wear. Serving wholesalers, retailers, boutiques, and international buyers from Surat, Gujarat.</p>
+      <div class="social-links" style="margin-top:1.5rem;">
+        <a href="https://www.linkedin.com/in/phanix-exim-0748b6401/" target="_blank" rel="noopener" class="social-link">in</a>
+        <a href="https://www.instagram.com/phanix_exim/" target="_blank" rel="noopener" class="social-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61589236751005" target="_blank" rel="noopener" class="social-link">f</a>
+        <a href="https://wa.me/919427202639" target="_blank" rel="noopener" class="social-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#womens">Women's Wear</a></li>
+        <li><a href="#kids">Kids Wear</a></li>
+        <li><a href="#process">Manufacturing</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#why">Why Phanix</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">International Export</a></li>
+        <li><a href="#services">Wholesale Supply</a></li>
+        <li><a href="#services">Boutique Supply</a></li>
+        <li><a href="#services">Retail Supply</a></li>
+        <li><a href="#services">OEM Manufacturing</a></li>
+        <li><a href="#services">Private Label</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+    <div class="contact-item">
+    <h4>Phone / WhatsApp</h4>
+    <p>+91 9427202639</p>
+    <p>+91 9409166592</p>
+    <p>+91 9664958494</p>
+</div>
+      <div class="footer-contact-item">✉️ <a href="mailto:phanixgarmets@gmail.com">phanixgarmets@gmail.com</a></div>
+      <div class="footer-contact-item">✉️ <a href="mailto:phanixexim@gmail.com">phanixexim@gmail.com</a></div>
+      <div class="footer-contact-item">📍 Surat, Gujarat, India</div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Phanix Garments. All rights reserved. · Surat, Gujarat, India</p>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/phanix-exim-0748b6401/" target="_blank" rel="noopener">LinkedIn</a>
+      &nbsp;·&nbsp;
+      <a href="https://www.instagram.com/phanix_exim/" target="_blank" rel="noopener">Instagram</a>
+      &nbsp;·&nbsp;
+      <a href="https://www.facebook.com/profile.php?id=61589236751005" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP BUTTON -->
+<a id="wa-btn" href="https://wa.me/919427202639" target="_blank" rel="noopener" title="Chat on WhatsApp" aria-label="WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- BACK TO TOP -->
+<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+<script>
+  // LOADER
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.getElementById('loader').classList.add('hidden');
+    }, 1800);
+  });
+
+  // NAV SCROLL
+  const navbar = document.getElementById('navbar');
+  const backTop = document.getElementById('back-top');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      navbar.classList.add('scrolled');
+      backTop.classList.add('visible');
+    } else {
+      navbar.classList.remove('scrolled');
+      backTop.classList.remove('visible');
+    }
+  });
+
+  // HAMBURGER
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+  hamburger.addEventListener('keydown', e => { if (e.key === 'Enter') hamburger.click(); });
+  function closeMobile() {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+  }
+
+  // SCROLL REVEAL
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => revealObs.observe(el));
+
+  // PROCESS ITEMS
+  const processItems = document.querySelectorAll('.process-item');
+  const processObs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 120);
+      }
+    });
+  }, { threshold: 0.2 });
+  processItems.forEach(el => processObs.observe(el));
+
+  // COUNTERS
+  function animateCounter(el) {
+    const target = parseInt(el.dataset.target);
+    const duration = 1800;
+    const step = target / (duration / 16);
+    let current = 0;
+    const timer = setInterval(() => {
+      current += step;
+      if (current >= target) { current = target; clearInterval(timer); }
+      el.textContent = Math.floor(current);
+    }, 16);
+  }
+  const counters = document.querySelectorAll('.counter-num');
+  const counterObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        animateCounter(e.target);
+        counterObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(el => counterObs.observe(el));
+
+  // GALLERY LIGHTBOX
+  function openLightbox(el) {
+    const src = el.querySelector('img').src;
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('lightbox').addEventListener('click', function(e) {
+    if (e.target === this) closeLightbox();
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+  // CONTACT FORM
+  function submitForm(e) {
+    e.preventDefault();
+    const success = document.getElementById('formSuccess');
+    success.style.display = 'block';
+    e.target.reset();
+    setTimeout(() => { success.style.display = 'none'; }, 5000);
+  }
+</script>
+</body>
+</html>

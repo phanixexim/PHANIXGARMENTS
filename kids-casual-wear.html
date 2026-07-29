@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Phanix Garments – Premium Kids Casual Wear Manufacturer & Wholesaler based in Surat, Gujarat, India.">
+<meta name="keywords" content="kids casual wear, kids co-ord sets, kids wear manufacturer, wholesale kids suits, surat garments">
+<meta name="author" content="Phanix Garments">
+<title>Kids Casual Wear | Phanix Garments — Kids Wear Manufacturer, Surat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #d4af37;
+    --gold-light: #e8c84a;
+    --gold-dim: rgba(212,175,55,0.15);
+    --gold-border: rgba(212,175,55,0.35);
+    --bg: #0f0f0f;
+    --bg-2: #161616;
+    --bg-3: #1c1c1c;
+    --glass: rgba(255,255,255,0.04);
+    --glass-border: rgba(255,255,255,0.08);
+    --text: #f0ece4;
+    --text-muted: #8a8278;
+    --text-dim: #5c5650;
+    --white: #ffffff;
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-elegant: 'Cormorant Garamond', Georgia, serif;
+    --radius: 2px;
+    --radius-lg: 6px;
+    --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; font-size: 16px; }
+  body { background: var(--bg); color: var(--text); font-family: var(--font-body); font-weight: 400; line-height: 1.7; overflow-x: hidden; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+    padding: 0 5%; display: flex; align-items: center; justify-content: space-between;
+    height: 72px; background: rgba(15,15,15,0.95); backdrop-filter: blur(20px);
+    box-shadow: 0 1px 0 var(--gold-border);
+  }
+  .nav-logo { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--gold); letter-spacing: 0.08em; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+  .nav-logo span { font-weight: 300; color: var(--text-muted); font-size: 0.7rem; letter-spacing: 0.2em; display: block; text-transform: uppercase; }
+  .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+  .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; transition: color 0.3s; position: relative; }
+  .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px; background: var(--gold); transition: width 0.3s ease; }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-cta { padding: 8px 20px; border: 1px solid var(--gold); color: var(--gold) !important; border-radius: var(--radius); font-size: 0.75rem !important; transition: background 0.3s ease, color 0.3s ease !important; }
+  .nav-cta:hover { background: var(--gold) !important; color: #000 !important; }
+  .nav-cta::after { display: none !important; }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+  .hamburger span { display: block; width: 24px; height: 1.5px; background: var(--gold); transition: var(--transition); }
+  .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 4.5px); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4.5px); }
+  .mobile-menu { display: none; position: fixed; inset: 72px 0 0 0; background: rgba(15,15,15,0.97); backdrop-filter: blur(20px); z-index: 800; flex-direction: column; align-items: center; justify-content: center; gap: 2rem; }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { color: var(--text-muted); text-decoration: none; font-size: 1.2rem; letter-spacing: 0.15em; text-transform: uppercase; font-family: var(--font-display); font-weight: 400; transition: color 0.3s; }
+  .mobile-menu a:hover { color: var(--gold); }
+
+  /* ── PAGE HEADER ── */
+  #page-header {
+    padding: 160px 5% 70px;
+    text-align: center;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(212,175,55,0.08) 0%, transparent 70%), var(--bg);
+    border-bottom: 1px solid var(--glass-border);
+  }
+  .breadcrumb { font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 1.2rem; }
+  .breadcrumb a { color: var(--text-dim); text-decoration: none; transition: color 0.3s; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .page-eyebrow { font-size: 0.7rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; }
+  .page-title { font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 700; color: var(--white); margin-bottom: 1.2rem; }
+  .page-title em { font-style: italic; color: var(--gold); }
+  .page-sub { font-family: var(--font-elegant); font-size: 1.15rem; color: var(--text-muted); max-width: 620px; margin: 0 auto; line-height: 1.8; }
+
+  /* ── SECTIONS / GRID ── */
+  section { padding: 100px 5%; }
+  #catalog { padding-top: 70px; background: var(--bg); }
+  .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.8rem; }
+
+  .product-card {
+    background: var(--bg-3); border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg); overflow: hidden;
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+    opacity: 0; transform: translateY(30px);
+  }
+  .product-card.visible { opacity: 1; transform: translateY(0); transition: opacity 0.7s ease, transform 0.7s ease, border-color 0.4s ease, box-shadow 0.4s ease; }
+  .product-card:hover { transform: translateY(-8px); border-color: var(--gold-border); box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px var(--gold-dim); }
+  .product-image { height: 340px; overflow: hidden; position: relative; background: linear-gradient(135deg, #1a1a1a, #252525); cursor: pointer; }
+  .product-image img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.6s ease, opacity 0.3s ease; }
+  .product-card:hover .product-image img { transform: scale(1.06); }
+  .product-badge { position: absolute; top: 1rem; left: 1rem; background: var(--gold); color: #000; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; padding: 4px 10px; border-radius: var(--radius); z-index: 2; }
+  .product-count { position: absolute; top: 1rem; right: 1rem; background: rgba(0,0,0,0.55); backdrop-filter: blur(6px); color: var(--gold-light); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; padding: 4px 10px; border-radius: var(--radius); z-index: 2; }
+  .product-body { padding: 1.4rem 1.4rem 1.6rem; }
+  .product-body h3 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; color: var(--white); margin-bottom: 0.5rem; }
+  .product-body p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1rem; }
+  .product-thumbs { display: flex; gap: 8px; flex-wrap: wrap; }
+  .product-thumbs img {
+    width: 44px; height: 44px; object-fit: cover; object-position: top;
+    border-radius: var(--radius); cursor: pointer; opacity: 0.55;
+    border: 1px solid transparent; transition: opacity 0.25s ease, border-color 0.25s ease;
+  }
+  .product-thumbs img:hover { opacity: 0.9; }
+  .product-thumbs img.active { opacity: 1; border-color: var(--gold); }
+  .product-enquire { display: inline-flex; align-items: center; gap: 8px; margin-top: 0.2rem; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); font-weight: 500; text-decoration: none; transition: gap 0.3s; }
+  .product-enquire:hover { gap: 12px; }
+
+  /* ── INTRO STRIP ── */
+  .intro-strip { text-align: center; max-width: 720px; margin: 0 auto 3.5rem; }
+  .intro-strip p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.8; }
+  .gold-rule { width: 48px; height: 1px; background: var(--gold); margin: 1.2rem auto; }
+
+  /* ── CTA STRIP ── */
+  #cta-strip { background: var(--gold); padding: 70px 5%; text-align: center; }
+  #cta-strip h2 { font-family: var(--font-display); font-size: clamp(1.6rem, 3.5vw, 2.4rem); color: #000; margin-bottom: 0.8rem; }
+  #cta-strip p { color: rgba(0,0,0,0.7); font-size: 0.95rem; margin-bottom: 1.8rem; font-family: var(--font-elegant); }
+  .btn-dark { padding: 14px 36px; background: #000; color: var(--gold); font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; border: none; cursor: pointer; text-decoration: none; border-radius: var(--radius); transition: transform 0.3s ease, background 0.3s ease; display: inline-block; }
+  .btn-dark:hover { transform: translateY(-2px); background: #1a1a1a; }
+
+  /* ── FOOTER ── */
+  footer { background: #080808; border-top: 1px solid var(--glass-border); padding: 60px 5% 30px; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 3rem; margin-bottom: 3rem; }
+  .footer-brand .footer-logo { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--gold); letter-spacing: 0.08em; margin-bottom: 1rem; }
+  .footer-brand p { font-size: 0.82rem; color: var(--text-dim); line-height: 1.7; max-width: 280px; }
+  .footer-col h4 { font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 1.2rem; }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 0.6rem; }
+  .footer-col ul li a { font-size: 0.82rem; color: var(--text-dim); text-decoration: none; transition: color 0.3s; }
+  .footer-col ul li a:hover { color: var(--text); }
+  .footer-contact-item { display: flex; gap: 0.7rem; align-items: flex-start; margin-bottom: 0.8rem; font-size: 0.82rem; color: var(--text-dim); }
+  .footer-contact-item a { color: var(--text-dim); text-decoration: none; transition: color 0.3s; }
+  .footer-contact-item a:hover { color: var(--gold); }
+  .contact-item h4 { font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 0.4rem; }
+  .contact-item p { font-size: 0.82rem; color: var(--text-dim); }
+  .footer-bottom { padding-top: 2rem; border-top: 1px solid var(--glass-border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .footer-bottom p { font-size: 0.78rem; color: var(--text-dim); }
+  .footer-bottom .footer-social { display: flex; gap: 0.5rem; }
+  .footer-bottom .footer-social a { color: var(--text-dim); text-decoration: none; font-size: 0.85rem; transition: color 0.3s; }
+  .footer-bottom .footer-social a:hover { color: var(--gold); }
+  .social-links { display: flex; gap: 0.75rem; margin-top: 2rem; }
+  .social-link { width: 40px; height: 40px; border: 1px solid var(--glass-border); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--text-muted); text-decoration: none; font-size: 0.9rem; transition: border-color 0.3s, color 0.3s, background 0.3s; }
+  .social-link:hover { border-color: var(--gold); color: var(--gold); background: var(--gold-dim); }
+
+  /* ── FLOATERS ── */
+  #wa-btn { position: fixed; bottom: 2rem; right: 2rem; z-index: 800; width: 56px; height: 56px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 20px rgba(37,211,102,0.3); transition: transform 0.3s ease, box-shadow 0.3s ease; font-size: 1.6rem; }
+  #wa-btn:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.45); }
+  #back-top { position: fixed; bottom: 2rem; left: 2rem; z-index: 800; width: 44px; height: 44px; background: var(--bg-3); border: 1px solid var(--gold-border); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--gold); font-size: 1rem; opacity: 0; pointer-events: none; transition: opacity 0.3s, transform 0.3s; }
+  #back-top.visible { opacity: 1; pointer-events: all; }
+  #back-top:hover { transform: translateY(-3px); }
+
+  /* LIGHTBOX */
+  #lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 9000; align-items: center; justify-content: center; }
+  #lightbox.open { display: flex; }
+  #lightbox img { max-width: 90vw; max-height: 90vh; border-radius: var(--radius-lg); }
+  #lightbox-close { position: absolute; top: 2rem; right: 2rem; font-size: 2rem; color: var(--gold); cursor: pointer; line-height: 1; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    nav { padding: 0 4%; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    section { padding: 70px 4%; }
+    #page-header { padding: 130px 4% 50px; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .product-image { height: 300px; }
+  }
+  @media (max-width: 480px) {
+    .products-grid { grid-template-columns: 1fr; }
+  }
+
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    PHANIX <div><span>Garments</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#womens">Women's Wear</a></li>
+    <li><a href="index.html#kids">Kids Wear</a></li>
+    <li><a href="index.html#process">Process</a></li>
+    <li><a href="index.html#gallery">Gallery</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#about" onclick="closeMobile()">About</a>
+  <a href="index.html#womens" onclick="closeMobile()">Women's Wear</a>
+  <a href="index.html#kids" onclick="closeMobile()">Kids Wear</a>
+  <a href="index.html#process" onclick="closeMobile()">Process</a>
+  <a href="index.html#gallery" onclick="closeMobile()">Gallery</a>
+  <a href="index.html#services" onclick="closeMobile()">Services</a>
+  <a href="index.html#contact" onclick="closeMobile()">Contact</a>
+</div>
+
+<!-- PAGE HEADER -->
+<header id="page-header">
+  <p class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; <a href="index.html#kids">Kids Wear</a> &nbsp;/&nbsp; Casual Wear</p>
+  <p class="page-eyebrow">Kids Collection</p>
+  <h1 class="page-title">Kids Casual <em>Wear</em></h1>
+  <p class="page-sub">Comfortable everyday co-ord sets for kids — soft cottons, easy-wash fabrics, stitched in-house for wholesalers, boutiques and international buyers.</p>
+</header>
+
+<!-- CATALOG -->
+<section id="catalog">
+  <div class="intro-strip reveal">
+    <div class="gold-rule"></div>
+    <p>Every style below is available in multiple prints/colourways and is export-ready for bulk and boutique orders. Tap a thumbnail to preview a colourway, or click the image to view it full-size.</p>
+  </div>
+
+  <div class="products-grid" id="productsGrid"></div>
+</section>
+
+<!-- CTA -->
+<section id="cta-strip">
+  <h2>Interested in this collection?</h2>
+  <p>Get catalogue pricing, MOQ and shipping details for any style shown above.</p>
+  <a href="https://wa.me/919427202639" target="_blank" rel="noopener" class="btn-dark">Enquire on WhatsApp</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">PHANIX GARMENTS</div>
+      <p>Trusted manufacturer and supplier of premium women's wear and kids wear. Serving wholesalers, retailers, boutiques, and international buyers from Surat, Gujarat.</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/phanix-exim-0748b6401/" target="_blank" rel="noopener" class="social-link">in</a>
+        <a href="https://www.instagram.com/phanix_exim/" target="_blank" rel="noopener" class="social-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61589236751005" target="_blank" rel="noopener" class="social-link">f</a>
+        <a href="https://wa.me/919427202639" target="_blank" rel="noopener" class="social-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="index.html#womens">Women's Wear</a></li>
+        <li><a href="index.html#kids">Kids Wear</a></li>
+        <li><a href="index.html#gallery">Gallery</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="index.html#services">International Export</a></li>
+        <li><a href="index.html#services">Wholesale Supply</a></li>
+        <li><a href="index.html#services">Boutique Supply</a></li>
+        <li><a href="index.html#services">OEM Manufacturing</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <div class="contact-item">
+        <h4>Phone / WhatsApp</h4>
+        <p>+91 9427202639</p>
+        <p>+91 9409166592</p>
+        <p>+91 9664958494</p>
+      </div>
+      <div class="footer-contact-item">✉️ <a href="mailto:phanixgarmets@gmail.com">phanixgarmets@gmail.com</a></div>
+      <div class="footer-contact-item">📍 Surat, Gujarat, India</div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Phanix Garments. All rights reserved. · Surat, Gujarat, India</p>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/phanix-exim-0748b6401/" target="_blank" rel="noopener">LinkedIn</a>
+      &nbsp;·&nbsp;
+      <a href="https://www.instagram.com/phanix_exim/" target="_blank" rel="noopener">Instagram</a>
+      &nbsp;·&nbsp;
+      <a href="https://www.facebook.com/profile.php?id=61589236751005" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP BUTTON -->
+<a id="wa-btn" href="https://wa.me/919427202639" target="_blank" rel="noopener" title="Chat on WhatsApp" aria-label="WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- BACK TO TOP -->
+<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <span id="lightbox-close" onclick="closeLightbox()">&times;</span>
+  <img id="lightbox-img" src="" alt="Product preview">
+</div>
+
+<script>
+  // ── PRODUCT DATA (from Casual Wear folder) ──
+  const products = [
+    {
+      name: "Green Paan",
+      folder: "Casual Wear/",
+      images: ["GREEN-PAAN-001.png", "GREEN-PAAN-002.png", "GREEN-PAAN-003.png", "GREEN-PAAN-004.png", "GREEN-PAAN-005.png", "GREEN-PAAN-006.png", "GREEN-PAAN-007.png", "GREEN-PAAN-008.png", "GREEN-PAAN-009.png", "GREEN-PAAN-010.png", "GREEN-PAAN-011.png", "GREEN-PAAN-012.png"],
+      desc: "A comfortable printed co-ord set for kids in a fresh green tone, perfect for everyday play. Available in 12 colourways."
+    },
+    {
+      name: "Modern Brown Co-Ord",
+      folder: "Casual Wear/",
+      images: ["Modern Brown Co-Ord-001.png", "Modern Brown Co-Ord-002.png", "Modern Brown Co-Ord-003.png", "Modern Brown Co-Ord-004.png", "Modern Brown Co-Ord-005.png", "Modern Brown Co-Ord-006.png", "Modern Brown Co-Ord-007.png", "Modern Brown Co-Ord-008.png", "Modern Brown Co-Ord-009.png", "Modern Brown Co-Ord-010.png"],
+      desc: "A relaxed, earthy-toned co-ord set for kids with an easy, everyday fit. Available in 10 colourways."
+    },
+    {
+      name: "Navya",
+      folder: "Casual Wear/",
+      images: ["NAVYA-001.png", "NAVYA-002.jpg", "NAVYA-003.png", "NAVYA-004.jpg", "NAVYA-005.png", "NAVYA-006.jpg", "NAVYA-007.png", "NAVYA-008.jpg", "NAVYA-009.png"],
+      desc: "A soft printed casual co-ord set for kids with a comfortable, breathable fabric. Available in 9 colourways."
+    },
+    {
+      name: "Grey Frallo",
+      folder: "Casual Wear/",
+      images: ["GREY-FRALLO 001.png", "GREY-FRALLO 002.png", "GREY-FRALLO 003.png", "GREY-FRALLO 004.png", "GREY-FRALLO 005.png", "GREY-FRALLO 006.png", "GREY-FRALLO 007.jpg"],
+      desc: "A cool grey-toned printed co-ord set for kids, designed for daily comfort. Available in 7 colourways."
+    },
+    {
+      name: "Casual Combo",
+      folder: "Casual Wear/",
+      images: ["CASUAL-COMBO-001.png", "CASUAL-COMBO-002.png", "CASUAL-COMBO-003.png", "CASUAL-COMBO-004.png", "CASUAL-COMBO-005.png", "CASUAL-COMBO-006.jpg"],
+      desc: "A matching twin-style co-ord set for kids with a relaxed, playful print. Available in 6 colourways."
+    },
+    {
+      name: "Green Kids",
+      folder: "Casual Wear/",
+      images: ["GREEN KIDS-001.jpg", "GREEN KIDS-002.jpg", "GREEN KIDS-003.jpg", "GREEN KIDS-004.jpg", "GREEN KIDS-005.jpg"],
+      desc: "A vibrant green casual co-ord set for kids with a comfortable, easy-movement fit. Available in 5 colourways."
+    }
+  ];
+
+  const grid = document.getElementById("productsGrid");
+
+  products.forEach((p, idx) => {
+    const mainId = "img-" + idx;
+    const encodedImages = p.images.map(img => encodeURI(p.folder + img));
+
+    const card = document.createElement("div");
+    card.className = "product-card reveal reveal-delay-" + ((idx % 3) + 1);
+
+    const thumbsHtml = p.images.map((img, i) => {
+      const src = encodeURI(p.folder + img);
+      return `<img src="${src}" class="${i === 0 ? 'active' : ''}" data-main="${mainId}" alt="${p.name} colourway ${i + 1}">`;
+    }).join("");
+
+    card.innerHTML = `
+      <div class="product-image" data-lightbox-src="${encodedImages[0]}">
+        <span class="product-badge">Casual Wear</span>
+        ${p.images.length > 1 ? `<span class="product-count">${p.images.length} Colourways</span>` : ""}
+        <img id="${mainId}" src="${encodedImages[0]}" alt="${p.name} Kids Casual Wear" loading="lazy">
+      </div>
+      <div class="product-body">
+        <h3>${p.name}</h3>
+        <p>${p.desc}</p>
+        ${p.images.length > 1 ? `<div class="product-thumbs">${thumbsHtml}</div>` : ""}
+        <a href="https://wa.me/919427202639?text=Hi%2C%20I'm%20interested%20in%20the%20${encodeURIComponent(p.name)}%20Kids%20Casual%20Wear" target="_blank" rel="noopener" class="product-enquire">Enquire Now →</a>
+      </div>
+    `;
+
+    grid.appendChild(card);
+  });
+
+  // Thumbnail swap
+  grid.addEventListener("click", (e) => {
+    if (e.target.matches(".product-thumbs img")) {
+      const mainImg = document.getElementById(e.target.dataset.main);
+      mainImg.style.opacity = 0;
+      setTimeout(() => {
+        mainImg.src = e.target.src;
+        mainImg.closest(".product-image").dataset.lightboxSrc = e.target.src;
+        mainImg.style.opacity = 1;
+      }, 150);
+      e.target.parentElement.querySelectorAll("img").forEach(t => t.classList.remove("active"));
+      e.target.classList.add("active");
+    }
+    const imageWrap = e.target.closest(".product-image");
+    if (imageWrap && !e.target.matches(".product-thumbs img")) {
+      openLightbox(imageWrap.dataset.lightboxSrc);
+    }
+  });
+
+  // NAV SCROLL
+  const navbar = document.getElementById('navbar');
+  const backTop = document.getElementById('back-top');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) { backTop.classList.add('visible'); } else { backTop.classList.remove('visible'); }
+  });
+
+  // HAMBURGER
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+  function closeMobile() {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+  }
+
+  // SCROLL REVEAL
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal, .product-card').forEach(el => revealObs.observe(el));
+
+  // LIGHTBOX
+  function openLightbox(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('lightbox').addEventListener('click', function(e) {
+    if (e.target === this) closeLightbox();
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+</script>
+</body>
+</html>
